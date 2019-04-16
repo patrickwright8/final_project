@@ -20,8 +20,34 @@ for i in income:
         income[i] = 125000.0
     elif i == "$150,000 or more":
         income[i] = 150000.0
-        
-        
+    elif i == "40,000 - $49,999":
+        income[i] = 45000.0
+    elif i == "70,000 - $79,999":
+        income[i] = 75000.0
+    elif i == "10,000 - $19,999":
+        income[i] = 15000.0
+    elif i == "50,000 - $59,999":
+        income[i] = 55000.0
+    elif i == "20,000 - $29,999":
+        income[i] = 25000.0
+    elif i == "30,000 - $39,999":
+        income[i] = 35000.0
+    elif i == "60,000 - $69,999":
+        income[i] = 65000.0
+    elif i == "80,000 - $89,999"
+        income[i] = 85000.0
+    elif i == "90,000 - $99,999"
+        income[i] = 95000.0
+    elif i == "100,000 and up":
+        income[i] = 100000.0
+
+
+
+
+
+
+    
+    
 for i in age:
     if i == "18-24":
         age[i] = 21.0
@@ -37,6 +63,21 @@ for i in age:
         age[i] = 69.5
     elif i == "75 or older":
         age[i] = 75.0
+    elif i == "26-30":
+        age[i] = 28.0
+    elif i == "61+":
+        age[i] = 61.0
+    elif i == "22-25":
+        age[i] = 23.5
+    elif i == "41-50":
+        age[i] = 45.5
+    elif i == "31-40":
+        age[i] = 35.5
+    elif i == "51-60":
+        age[i] = 55.5
+    elif i == "18-21":
+        age[i] = 19.5
+        
         
     
     

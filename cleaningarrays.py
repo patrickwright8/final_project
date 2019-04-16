@@ -5,19 +5,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 for i in income:
     if i == "Less than $10,000":
         income[i] = 5000
@@ -41,5 +28,8 @@ for i in sex:
     elif i == "Female":
         sex[i] = 1
     
+
+income = (income-np.min(income))/((np.max(income))-np.min(income))
+
     
         

@@ -28,8 +28,10 @@ for i in sex:
     elif i == "Female":
         sex[i] = 1
     
+#Normalizing Arrays from 0 to 1
 
 income = (income-np.min(income))/((np.max(income))-np.min(income))
+
 
     
         

@@ -8,7 +8,7 @@ def cleaning(income, age, sex):
     income[income == 'Less than $10,000'] = 5000.0
     income[income == '$10,000 to $24,999'] = 17500.0
     income[income == "$25,000 to $49,999"] = 37500.0
-    income[income == "$50,000 to $74,000"] = 62500.0
+    income[income == "$50,000 to $74,999"] = 62500.0
     income[income == "$75,000 to $99,999"] = 87500.0
     income[income == "$100,000 to $149,999"] = 125000.0
     income[income == "$150,000 or more"] = 150000.0

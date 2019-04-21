@@ -91,11 +91,13 @@ for i in sex:
     
 #Normalizing Arrays from 0 to 1
 
-income = (income-np.min(income))/((np.max(income))-np.min(income))
-howhappy = (howhappy-np.min(howhappy))/((np.max(howhappy))-np.min(howhappy))
-howsatisfied = (howsatisfied-np.min(howsatisfied))/((np.max(howsatisfied))-np.min(howsatisfied))
-howsafe = (howsafe-np.min(howsafe))/((np.max(howsafe))-np.min(howsafe))
-age = (age-np.min(age))/((np.max(age))-np.min(age))
+def normalize(income, howhappy, howsatisfied, howsafe, age):
+    income = (income-np.min(income))/((np.max(income))-np.min(income))
+    howhappy = (howhappy-np.min(howhappy))/((np.max(howhappy))-np.min(howhappy))
+    howsatisfied = (howsatisfied-np.min(howsatisfied))/((np.max(howsatisfied))-np.min(howsatisfied))
+    howsafe = (howsafe-np.min(howsafe))/((np.max(howsafe))-np.min(howsafe))
+    age = (age-np.min(age))/((np.max(age))-np.min(age))
+    return income, howhappy, howsatisfied, howsafe, age
 
 
     

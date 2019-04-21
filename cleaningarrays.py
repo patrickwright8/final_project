@@ -34,9 +34,9 @@ for i in income:
         income[i] = 35000.0
     elif i == "60,000 - $69,999":
         income[i] = 65000.0
-    elif i == "80,000 - $89,999"
+    elif i == "80,000 - $89,999":
         income[i] = 85000.0
-    elif i == "90,000 - $99,999"
+    elif i == "90,000 - $99,999":
         income[i] = 95000.0
     elif i == "100,000 and up":
         income[i] = 100000.0

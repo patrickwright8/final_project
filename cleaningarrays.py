@@ -38,6 +38,9 @@ def cleaning(income, age, sex):
     age[age == "18-21"] = 19.5
     sex[sex == "Male"] = 0
     sex[sex == "Female"] = 1
+    income = income.astype(np.float)
+    age = age.astype(np.float)
+    sex = sex.astype(np.float)
     return income, age, sex
     
        

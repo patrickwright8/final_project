@@ -1,4 +1,4 @@
-import scipy.interpolate as *
+from scipy.interpolate import *
 import numpy as np
 
 

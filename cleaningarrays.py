@@ -1,4 +1,4 @@
-
+import numpy as np
 
 #### FILTERING AND CLEANING ARRAYS
 
@@ -36,14 +36,17 @@ def cleaning(income, age, sex):
     age[age == "31-40"] = 35.5
     age[age == "51-60"] = 55.5
     age[age == "18-21"] = 19.5
-    sex[sex == "Male"] = 0
-    sex[sex == "Female"] = 1
-    income = income.astype(np.float)
-    age = age.astype(np.float)
-    sex = sex.astype(np.float)
+    sex[sex == "Male"] = 0.0
+    sex[sex == "Female"] = 1.0
     return income, age, sex
     
-       
+def floating(floatarray):
+    for i in range(len(floatarray)):
+        try:
+            floatarray[i] = float(floatarray[i])
+        except:
+            floatarray[i] = floatarray[i]
+    return floatarray
     
 
 #Normalizing Arrays from 0 to 1

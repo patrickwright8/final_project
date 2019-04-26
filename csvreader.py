@@ -44,22 +44,19 @@ where the cleaning functions are run. (because they have to be run before )
 howhappy, howsatisfied, howsafe, sex, age, income, howbeautiful = readcsv()
 # Below creates a "classification" array whose value is 1 if x-array[index] AND y-array[index] both exist
 def createclassarrays(income, howsafe, age):
-    incomeandhappy = np.zeros(income)
-    sexandsafe = np.zeros(howsafe)
-    ageandhappy = np.zeros(age)
-    incomeandbeauty = np.zeros(income)
+    incomeandhappy = np.zeros(len(income))
+    sexandsafe = np.zeros(len(sex))
+    ageandhappy = np.zeros(len(age))
+    incomeandbeauty = np.zeros(len(income))
     return incomeandhappy, sexandsafe, ageandhappy, incomeandbeauty
 
 def createclasses(array1, array2, classarray):
     index = 0
     while index < len(array1):
-        try:
-            array1[index] = float(array1[index])
-            array2[index] = float(array2[index])
+        if type(array1[index])==float and type(array2[index])==float:
             classarray[index] = 1
             index = index+1
-        except:
-            classarray[index] = 0
+        else:
             index = index+1
     return classarray
 

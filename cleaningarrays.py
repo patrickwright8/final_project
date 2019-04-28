@@ -51,14 +51,16 @@ def floating(floatarray):
 
 #Normalizing Arrays from 0 to 1
 
-def normalize(income, howhappy, howsatisfied, howsafe, age):
+def normalize(howsafe, sexandsafe):          #income, howhappy, howsatisfied, howsafe, age):
+    '''
     income = (income-np.min(income))/((np.max(income))-np.min(income))
     howhappy = (howhappy-np.min(howhappy))/((np.max(howhappy))-np.min(howhappy))
     howsatisfied = (howsatisfied-np.min(howsatisfied))/((np.max(howsatisfied))-np.min(howsatisfied))
-    howsafe = (howsafe-np.min(howsafe))/((np.max(howsafe))-np.min(howsafe))
-    age = (age-np.min(age))/((np.max(age))-np.min(age))
-    return income, howhappy, howsatisfied, howsafe, age
-
+    '''
+    howsafe[sexandsafe==1] = (howsafe[sexandsafe==1]-np.min(howsafe[sexandsafe==1]))/((np.max(howsafe[sexandsafe==1]))-np.min(howsafe[sexandsafe==1]))
+    #age = (age-np.min(age))/((np.max(age))-np.min(age))
+    #return income, howhappy, howsatisfied, howsafe, age
+    return howsafe[sexandsafe==1]
 
     
         

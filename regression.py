@@ -39,7 +39,7 @@ def agehappiness(df): #Returns numeric values for slope and intercept, plots sca
     linregstats = stats.linregress(X[mask], Y[mask])
     slope = linregstats[0]
     intercept = linregstats[1]
-    sns.regplot(x="age", y="howhappy", data=df, scatter_kws={'s':0.1}).set_title("Income vs Happiness for Somerville") #plots regression
+    sns.regplot(x="age", y="howhappy", data=df, scatter_kws={'s':0.1}).set_title("Age vs Happiness for Somerville") #plots regression
     print("Slope = " + str(slope)) 
     print("y-intercept = " + str(intercept))
   
@@ -51,7 +51,7 @@ def incomebeauty(df): #Returns numeric values for slope and intercept, plots sca
     linregstats = stats.linregress(X[mask], Y[mask])
     slope = linregstats[0]
     intercept = linregstats[1]
-    sns.regplot(x="income", y="howbeautiful", data=df, scatter_kws={'s':0.1}).set_title("Income vs Happiness for Somerville") #plots regression
+    sns.regplot(x="income", y="howbeautiful", data=df, scatter_kws={'s':0.1}).set_title("Income vs Perception of Neighborhood Beauty for Somerville") #plots regression
     print("Slope = " + str(slope)) 
     print("y-intercept = " + str(intercept))
     

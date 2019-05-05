@@ -36,8 +36,8 @@ def cleaning(income, age, sex, howhappy, howsatisfied, howsafe):
     age[age == "31-40"] = 35.5
     age[age == "51-60"] = 55.5
     age[age == "18-21"] = 19.5
-    sex[sex == "Male"] = 0
-    sex[sex == "Female"] = 1
+    sex[sex == "Male"] = 0.0
+    sex[sex == "Female"] = 1.0
     sex[sex == 'Female, Male'] = ''
     howhappy[1857] = ''
     howhappy[535] = ''

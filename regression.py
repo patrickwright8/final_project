@@ -7,7 +7,7 @@ import seaborn as sns; sns.set(color_codes=True) #Seaborn is imported to be able
 # The following code requires that income, age, sex, howhappy, howsatisfied and howsafe have already been defined as numpy
 # arrays and cleaned through the cleaning.py function.
 
-def pandasframe(income, age, sex, howhappy, howsatisfied, howsafe): #Puts data in a pandas dataframe, changes all data to floats and changes blank data to 'nan' values
+def pandasframe(income, age, sex, howhappy, howsatisfied, howsafe, howbeautiful): #Puts data in a pandas dataframe, changes all data to floats and changes blank data to 'nan' values
     df = pd.DataFrame({'income':income, 'age':age, 'sex':sex , 'howhappy':howhappy, 'howsatisfied':howsatisfied, 'howsafe':howsafe})
     df["income"] = pd.to_numeric(df.income, errors='coerce')
     df["age"] = pd.to_numeric(df.age, errors='coerce')
@@ -15,6 +15,7 @@ def pandasframe(income, age, sex, howhappy, howsatisfied, howsafe): #Puts data i
     df["sex"] = pd.to_numeric(df.sex, errors='coerce')
     df["howsatisfied"] = pd.to_numeric(df.howsatisfied, errors='coerce')
     df["howsafe"] = pd.to_numeric(df.howsafe, errors='coerce')
+    df["howbeautiful"] = pd.to_numeric(df.howbeautiful, errors='coerce')
     return df
 
 #df = pandasframe() #calling function, add to driver

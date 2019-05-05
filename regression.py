@@ -19,7 +19,7 @@ def pandasframe(income, age, sex, howhappy, howsatisfied, howsafe): #Puts data i
 
 #df = pandasframe() #calling function, add to driver
 
-def linearregression(df): #Returns numeric values for slope and intercept, plots scatter plot and regression line 
+def incomehappiness(df): #Returns numeric values for slope and intercept, plots scatter plot and regression line 
     X = df.income 
     Y = df.howhappy
     mask = ~np.isnan(X) & ~np.isnan(Y) #Creates a mask to ignore nan (not a number) values to perform regression
@@ -29,6 +29,32 @@ def linearregression(df): #Returns numeric values for slope and intercept, plots
     sns.regplot(x="income", y="howhappy", data=df, scatter_kws={'s':0.1}).set_title("Income vs Happiness for Somerville") #plots regression
     print("Slope = " + str(slope)) 
     print("y-intercept = " + str(intercept))
+   
+
+def agehappiness(df): #Returns numeric values for slope and intercept, plots scatter plot and regression line 
+    X = df.age 
+    Y = df.howhappy
+    mask = ~np.isnan(X) & ~np.isnan(Y) #Creates a mask to ignore nan (not a number) values to perform regression
+    linregstats = stats.linregress(X[mask], Y[mask])
+    slope = linregstats[0]
+    intercept = linregstats[1]
+    sns.regplot(x="age", y="howhappy", data=df, scatter_kws={'s':0.1}).set_title("Income vs Happiness for Somerville") #plots regression
+    print("Slope = " + str(slope)) 
+    print("y-intercept = " + str(intercept))
+  
+
+def incomebeauty(df): #Returns numeric values for slope and intercept, plots scatter plot and regression line 
+    X = df.income 
+    Y = df.howbeautiful
+    mask = ~np.isnan(X) & ~np.isnan(Y) #Creates a mask to ignore nan (not a number) values to perform regression
+    linregstats = stats.linregress(X[mask], Y[mask])
+    slope = linregstats[0]
+    intercept = linregstats[1]
+    sns.regplot(x="income", y="howbeautiful", data=df, scatter_kws={'s':0.1}).set_title("Income vs Happiness for Somerville") #plots regression
+    print("Slope = " + str(slope)) 
+    print("y-intercept = " + str(intercept))
+    
+
     
 #linearregression()  #calling function, add to driver  
 

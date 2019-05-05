@@ -8,7 +8,7 @@ import seaborn as sns; sns.set(color_codes=True) #Seaborn is imported to be able
 # arrays and cleaned through the cleaning.py function.
 
 def pandasframe(income, age, sex, howhappy, howsatisfied, howsafe, howbeautiful): #Puts data in a pandas dataframe, changes all data to floats and changes blank data to 'nan' values
-    df = pd.DataFrame({'income':income, 'age':age, 'sex':sex , 'howhappy':howhappy, 'howsatisfied':howsatisfied, 'howsafe':howsafe})
+    df = pd.DataFrame({'income':income, 'age':age, 'sex':sex , 'howhappy':howhappy, 'howsatisfied':howsatisfied, 'howsafe':howsafe, 'howbeautiful':howbeautiful})
     df["income"] = pd.to_numeric(df.income, errors='coerce')
     df["age"] = pd.to_numeric(df.age, errors='coerce')
     df["howhappy"] = pd.to_numeric(df.howhappy, errors='coerce')

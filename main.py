@@ -6,7 +6,7 @@ from regression import pandasframe, linearregression
 import numpy as np
 
 howhappy, howsatisfied, howsafe, sex, age, income, howbeautiful = readcsv()
-income, age, sex = cleaning(income, age, sex)
+income, age, sex, howhappy, howsatisfied, howsafe = cleaning(income, age, sex, howhappy, howsatisfied, howsafe)
 howbeautiful = floating(howbeautiful)
 howhappy = floating(howhappy)
 howsafe = floating(howsafe)
@@ -26,7 +26,8 @@ centroid, assignments = iterate(maximum, centroid, sex, howsafe_cluster)
 percentage = checkaccuracy(assignments, sex, centroid)
 print('Histogram generated with centroids', centroid[0], 'and', centroid[1])
 print('Accuracy of', percentage, '%')
+print('*** Linreg Below ***')
 # *** Below is the linreg portion ***
 income, age, sex, howhappy, howsatisfied, howsafe = cleaning(income, age, sex, howhappy, howsatisfied, howsafe)
-df = pandasframe()
-linearregression()
+df = pandasframe(income, age, sex, howhappy, howsatisfied, howsafe)
+linearregression(df)

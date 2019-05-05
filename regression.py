@@ -23,7 +23,7 @@ def linearregression(): #Returns numeric values for slope and intercept, plots s
     X = df.income 
     Y = df.howhappy
     mask = ~np.isnan(X) & ~np.isnan(Y) #Creates a mask to ignore nan (not a number) values to perform regression
-    slope, intercept = stats.linregress(X[mask], Y[mask])
+    stats.linregress(X[mask], Y[mask])
     sns.regplot(x="income", y="howhappy", data=df, scatter_kws={'s':0.1}).set_title("Income vs Happiness for Somerville") #plots regression
     print("Slope = " + str(slope)) 
     print("y-intercept = " + str(intercept))

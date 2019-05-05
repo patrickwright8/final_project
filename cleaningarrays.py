@@ -4,7 +4,7 @@ import numpy as np
 
 
 
-def cleaning(income, age, sex):
+def cleaning(income, age, sex, howhappy, howsatisfied, howsafe): 
     income[income == 'Less than $10,000'] = 5000.0
     income[income == '$10,000 to $24,999'] = 17500.0
     income[income == "$25,000 to $49,999"] = 37500.0
@@ -36,9 +36,16 @@ def cleaning(income, age, sex):
     age[age == "31-40"] = 35.5
     age[age == "51-60"] = 55.5
     age[age == "18-21"] = 19.5
-    sex[sex == "Male"] = 0.0
-    sex[sex == "Female"] = 1.0
-    return income, age, sex
+    sex[sex == "Male"] = 0
+    sex[sex == "Female"] = 1
+    sex[sex == 'Female, Male'] = ''
+    howhappy[1857] = ''
+    howhappy[535] = ''
+    howhappy[1338] = ''
+    howhappy[2463] = ''
+    howhappy[3769] = ''  
+    return income, age, sex, howhappy, howsatisfied, howsafe
+    
     
 def floating(floatarray):
     for i in range(len(floatarray)):

@@ -2,6 +2,7 @@
 from csvreader import readcsv, createclasses, createclassarrays
 from cleaningarrays import cleaning, floating, normalize
 from clustering import iterate, createinitialcentroids, checkaccuracy
+from regression import pandasframe, linearregression
 import numpy as np
 
 howhappy, howsatisfied, howsafe, sex, age, income, howbeautiful = readcsv()
@@ -25,3 +26,7 @@ centroid, assignments = iterate(maximum, centroid, sex, howsafe_cluster)
 percentage = checkaccuracy(assignments, sex, centroid)
 print('Histogram generated with centroids', centroid[0], 'and', centroid[1])
 print('Accuracy of', percentage, '%')
+# *** Below is the linreg portion ***
+income, age, sex, howhappy, howsatisfied, howsafe = cleaning(income, age, sex, howhappy, howsatisfied, howsafe)
+df = pandasframe()
+linearregression()

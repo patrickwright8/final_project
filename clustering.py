@@ -16,6 +16,7 @@ def graphdata(howsafe_cluster, sex, centroid):
     plt.hist([centroid[1]], color='green')
     plt.title('Histogram of How Safe one feels at Night')
     plt.xlabel('How safe one feels walking at night')
+    plt.ylabel('Number of responses')
     plt.show()
     
 def createdistances(howsafe_cluster, centroid):

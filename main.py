@@ -32,4 +32,4 @@ income, age, sex, howhappy, howsatisfied, howsafe = cleaning(income, age, sex, h
 df = pandasframe(income, age, sex, howhappy, howsatisfied, howsafe, howbeautiful)
 incomehappiness(df)
 agehappiness(df)
-incomebeautiful(df)
+incomebeauty(df)

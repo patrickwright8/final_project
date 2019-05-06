@@ -2,7 +2,7 @@ By Patrick Wright and Andy Hernandez
 
 INSTRUCTIONS TO PERFORM DATA ANALYSIS:
 
-Simply run main.py, nothing else is needed.
+Simply run main.py. Delete the comments at the bottom to display the different graphs (if there are no comments, all 3 graphs will display at once.
 
 OVERVIEW OF PROGRAMS AND FUNCTIONS
 

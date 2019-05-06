@@ -1,4 +1,4 @@
-By Patrick Wright and Andy Hernandez
+By Patrick Wright and Andres Hernandez
 
 INSTRUCTIONS TO PERFORM DATA ANALYSIS:
 
@@ -34,3 +34,26 @@ clustering.py - Contains functions for k-means clustering algorithm
     2. The points in the "howsafe" array are assigned to the nearest centroid.
     3. The location of the centroid changes to the mean of all its constituent points.
     4. Steps 2 and 3 are repeated many many times.
+    
+    
+    
+    
+ cleaningarrays.py - Cleans survey data by changing the survey brackets into float values
+ 
+ Contains functions:
+ 	
+   ~cleaningarrays - changes individual survey brackets (ex. "$10,000 to $24,000" to float value (ex. 19,000.0) in order to facilitate analysis.
+   
+   ~normalize - normalizes arrays for clustering purposes
+   
+   
+ regression.py - puts arrays into pandas dataframe and then performs regression on three relationships. Contains global pandas dataframe creation.
+ 
+  Contains functions:
+  
+  ~incomehappiness - performs regression for income vs happiness
+  ~agehappiness - performs regression on age and happiness
+  ~incomebeauty - performs regression on income and howbeautiful
+    
+    
+

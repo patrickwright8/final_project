@@ -8,17 +8,20 @@ OVERVIEW OF PROGRAMS AND FUNCTIONS
 
 main.py - Driver; contains no functions
 
+
 csvreader.py - CSV reader that extracts data from survey.csv
 
 Contains functions:
 
   -readcsv
     Simple CSV reader that reads survey.csv
-  -createclassarray
+ 
+ -createclassarray
 	
     Creates a "class" array in order to perform clustering/linreg.
     This is a large data set so some people leave answers blank and fill in others.
     This function just creates a number of empty arrays the same size as the ones being classified
+  
   -createclasses
 	
     This function returns a class array that is 1 if both values of the two arrays at a given index are floatable 

@@ -2,7 +2,7 @@
 from csvreader import readcsv, createclasses, createclassarrays
 from cleaningarrays import cleaning, floating, normalize
 from clustering import iterate, createinitialcentroids, checkaccuracy
-from regression import pandasframe, linearregression
+from regression import pandasframe, linearregression, incomehappiness, agehappiness, incomebeauty
 import numpy as np
 
 howhappy, howsatisfied, howsafe, sex, age, income, howbeautiful = readcsv()
@@ -16,6 +16,7 @@ incomeandhappy = createclasses(income, howhappy, incomeandhappy)
 sexandsafe = createclasses(sex, howsafe, sexandsafe)
 ageandhappy = createclasses(age, howhappy, ageandhappy)
 incomeandbeauty = createclasses(income, howbeautiful, incomeandbeauty)
+# Next two lines of code creates a normalized array of "howsafe" JUST for clustering
 howsafe_cluster = normalize(howsafe, sexandsafe)
 howsafe_cluster = howsafe_cluster.astype(np.float)
 # *** Below is the clustering portion ***

@@ -31,5 +31,8 @@ print('*** Linreg Below ***')
 income, age, sex, howhappy, howsatisfied, howsafe = cleaning(income, age, sex, howhappy, howsatisfied, howsafe)
 df = pandasframe(income, age, sex, howhappy, howsatisfied, howsafe, howbeautiful)
 incomehappiness(df)
-agehappiness(df)
-incomebeauty(df)
+#agehappiness(df)
+#incomebeauty(df)
+
+# **** IMPORTANT NOTE ****
+# in order to visualize a plot for the linear regression portion, the other two must be commented out. 
